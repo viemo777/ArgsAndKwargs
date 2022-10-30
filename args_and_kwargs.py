@@ -45,4 +45,3 @@ def func_with_param_and_kwargs(greening, **kwargs):
 
 func_with_param_and_kwargs('Hi', age=14, name='Vitalii')
 
-
