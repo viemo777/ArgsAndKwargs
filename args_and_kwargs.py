@@ -1,3 +1,5 @@
+# import numpy as np
+
 def ten_percent_of_product(x, y):
     return (x * y) * 0.1
 
@@ -45,3 +47,29 @@ def func_with_param_and_kwargs(greening, **kwargs):
 
 func_with_param_and_kwargs('Hi', age=14, name='Vitalii')
 
+
+def is_cat_here(*args):
+    for x in args:
+        if x.upper() == 'CAT':
+            return True
+    return False
+
+
+print(is_cat_here('Cat', 32, 'rat'))
+
+
+def is_item_here(item, *args):
+    return item in args
+
+
+print(is_item_here('color', 32, 'rat', 'color'))
+
+def your_favorite_color(my_color, **kwargs):
+    if 'color' in kwargs:
+        print('My favorite color is {}, but {} is also pretty good!'.format(my_color, kwargs['color']))
+    else:
+        print('My favorite color is {}, what is your favorite color?'.format(my_color))
+
+
+your_favorite_color('green', color='red', size=3)
+your_favorite_color('green', color1='red', size=3)
